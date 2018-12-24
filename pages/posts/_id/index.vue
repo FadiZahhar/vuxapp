@@ -1,10 +1,10 @@
 <template>
-<div class="simple-post-page">
+<div class="single-post-page">
 <section class="post">
 <h1 class="post-title">Title of the post</h1>
 <div class="post-details">
-<div class="post-details">Last updated on XXX</div>
-<div class="post-details">Written by name</div>
+<div class="post-detail">Last updated on XXX</div>
+<div class="post-detail">Written by name</div>
 </div>
 <p class="post-content">Content of the post</p>
 </section>
