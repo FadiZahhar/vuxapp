@@ -4,28 +4,38 @@
   <h1> Get the latest tech news! </h1>
   </section>
   <section class="featured-posts">
-    <nuxt-link :to="'/posts/' + 1">
-      <article class="post-preview">
-        <div class="post-thumbnail" style="background-image:url(https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=730&crop=1)"></div>
-        <div class="post-content">
-          <h1>Post Title</h1>
-          <p>Preview Text</p>
-        </div>
-      </article>
-    </nuxt-link>
+    <PostPreview 
+    id="1" 
+    thumbnail="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=730&crop=1"
+    title="Hello there"
+    previewText="This is my first post" />
 
-        <nuxt-link :to="'/posts/' + 2">
-      <article class="post-preview">
-        <div class="post-thumbnail" style="background-image:url(https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=730&crop=1)"></div>
-        <div class="post-content">
-          <h1>Post Title 2</h1>
-          <p>Preview Text 2</p>
-        </div>
-      </article>
-    </nuxt-link>
+    <PostPreview 
+    id="2" 
+    thumbnail="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=730&crop=1"
+    title="Hello there 2"
+    previewText="This is my first post 2" />
+
+
+    <PostPreview 
+    id="3" 
+    thumbnail="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=730&crop=1"
+    title="Hello there 3"
+    previewText="This is my first post 3" />
+
   </section>
  </div>
 </template>
+
+<script>
+import PostPreview from '@/components/Posts/PostPreview'
+
+export default {
+    components: {
+        PostPreview: PostPreview
+    }
+}
+</script>
 
 <style scoped>
 .intro {
@@ -65,41 +75,5 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 </style>
